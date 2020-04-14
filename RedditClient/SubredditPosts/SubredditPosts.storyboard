@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eII-bJ-fPE">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Subreddit Posts View Controller-->
+        <scene sceneID="kOj-9Y-QtX">
+            <objects>
+                <viewController id="eII-bJ-fPE" customClass="SubredditPostsViewController" customModule="RedditClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDR-dH-zWF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-2t-CkP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58c-iZ-4kD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <navigationItem title="Title" id="faP-JO-KNM">
+                                                <leftBarButtonItems>
+                                                    <barButtonItem title="Item" image="xmark" catalog="system" id="Xqo-Di-oFq">
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="onCloseTapped:" destination="eII-bJ-fPE" id="4FV-He-WRb"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem title="Item" image="arrow.left" catalog="system" id="9OJ-h4-DjQ">
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="onBackTapped:" destination="eII-bJ-fPE" id="DOO-CA-RKT"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </leftBarButtonItems>
+                                                <rightBarButtonItems>
+                                                    <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="JRx-PA-XV4">
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="onRefresh:" destination="eII-bJ-fPE" id="CL8-y7-cca"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem title="Item" image="arrow.right" catalog="system" id="Isu-eW-emE">
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="onForwardTapped:" destination="eII-bJ-fPE" id="03n-DC-aZg"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </rightBarButtonItems>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Gc-mcm">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="725"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-Ak-bRk">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="2"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UwP-Ak-bRk" secondAttribute="trailing" id="2sm-rZ-uOf"/>
+                                    <constraint firstItem="eCN-Gc-mcm" firstAttribute="leading" secondItem="kNu-2t-CkP" secondAttribute="leading" id="79X-To-Ea3"/>
+                                    <constraint firstItem="eCN-Gc-mcm" firstAttribute="top" secondItem="58c-iZ-4kD" secondAttribute="bottom" id="9mC-Zf-8VD"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCN-Gc-mcm" secondAttribute="trailing" id="K3W-7N-jke"/>
+                                    <constraint firstItem="58c-iZ-4kD" firstAttribute="top" secondItem="kNu-2t-CkP" secondAttribute="top" id="YEa-3h-tUH"/>
+                                    <constraint firstItem="58c-iZ-4kD" firstAttribute="leading" secondItem="kNu-2t-CkP" secondAttribute="leading" id="abI-VI-jTI"/>
+                                    <constraint firstAttribute="trailing" secondItem="58c-iZ-4kD" secondAttribute="trailing" id="eSg-0g-hvH"/>
+                                    <constraint firstItem="UwP-Ak-bRk" firstAttribute="top" secondItem="58c-iZ-4kD" secondAttribute="bottom" id="jjY-Ym-d3W"/>
+                                    <constraint firstAttribute="bottom" secondItem="eCN-Gc-mcm" secondAttribute="bottom" id="r1E-Vd-vb5"/>
+                                    <constraint firstItem="UwP-Ak-bRk" firstAttribute="leading" secondItem="kNu-2t-CkP" secondAttribute="leading" id="tYP-2l-zJp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kNu-2t-CkP" firstAttribute="top" secondItem="Nk1-4q-ciG" secondAttribute="top" id="EPu-h0-SED"/>
+                            <constraint firstItem="Nk1-4q-ciG" firstAttribute="trailing" secondItem="kNu-2t-CkP" secondAttribute="trailing" id="IZe-Vf-SwP"/>
+                            <constraint firstItem="kNu-2t-CkP" firstAttribute="leading" secondItem="Nk1-4q-ciG" secondAttribute="leading" id="NtA-Xm-zPF"/>
+                            <constraint firstItem="Nk1-4q-ciG" firstAttribute="bottom" secondItem="kNu-2t-CkP" secondAttribute="bottom" id="RK7-QP-R5M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nk1-4q-ciG"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backItem" destination="9OJ-h4-DjQ" id="m5Z-W6-dMb"/>
+                        <outlet property="forwardItem" destination="Isu-eW-emE" id="mYJ-MD-Aij"/>
+                        <outlet property="navigationBar" destination="58c-iZ-4kD" id="fyK-5k-lRr"/>
+                        <outlet property="progressView" destination="UwP-Ak-bRk" id="yBp-8Y-shf"/>
+                        <outlet property="webView" destination="eCN-Gc-mcm" id="zL5-4l-y5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgW-Xg-FD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="arrow.right" catalog="system" width="64" height="48"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

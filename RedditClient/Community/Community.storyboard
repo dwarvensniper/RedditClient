@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZQ-Gk-XxB">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Community View Controller-->
+        <scene sceneID="vDy-yF-xE7">
+            <objects>
+                <viewController id="b15-SP-wbU" customClass="CommunityViewController" customModule="RedditClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDH-Kb-cxa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTk-ub-bQ4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="afb-DE-Bmv">
+                                        <rect key="frame" x="0.0" y="61" width="414" height="713"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.85936273918521677" green="0.85521122836789698" blue="0.86351425000253668" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-5m-lb1">
+                                        <rect key="frame" x="10" y="19.666666666666664" width="20" height="17.000000000000007"/>
+                                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="8G2-1k-VMC"/>
+                                            <constraint firstAttribute="width" constant="20" id="ZUs-lY-iGs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-fh-PcY">
+                                        <rect key="frame" x="35" y="0.0" width="374" height="56"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4sb-4c-eoq">
+                                        <rect key="frame" x="188.66666666666666" y="368.66666666666669" width="37" height="37"/>
+                                        <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO DATA! Swipe down to refresh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-Li-mw2">
+                                        <rect key="frame" x="81.666666666666671" y="377" width="250.66666666666663" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4sb-4c-eoq" firstAttribute="centerX" secondItem="UTk-ub-bQ4" secondAttribute="centerX" id="7uA-XZ-rko"/>
+                                    <constraint firstItem="a3l-fh-PcY" firstAttribute="leading" secondItem="hCN-5m-lb1" secondAttribute="trailing" constant="5" id="D0f-MO-FxH"/>
+                                    <constraint firstItem="afb-DE-Bmv" firstAttribute="top" secondItem="a3l-fh-PcY" secondAttribute="bottom" constant="5" id="PcK-cc-xzo"/>
+                                    <constraint firstItem="afb-DE-Bmv" firstAttribute="leading" secondItem="UTk-ub-bQ4" secondAttribute="leading" id="SJY-sx-5bo"/>
+                                    <constraint firstItem="a3l-fh-PcY" firstAttribute="centerY" secondItem="hCN-5m-lb1" secondAttribute="centerY" id="bHD-GT-0W2"/>
+                                    <constraint firstAttribute="trailing" secondItem="afb-DE-Bmv" secondAttribute="trailing" id="cZ6-Zj-DQw"/>
+                                    <constraint firstItem="hCN-5m-lb1" firstAttribute="leading" secondItem="UTk-ub-bQ4" secondAttribute="leading" constant="10" id="h3N-MG-gix"/>
+                                    <constraint firstItem="a3l-fh-PcY" firstAttribute="top" secondItem="UTk-ub-bQ4" secondAttribute="top" id="hUj-Em-RbQ"/>
+                                    <constraint firstItem="4sb-4c-eoq" firstAttribute="centerY" secondItem="UTk-ub-bQ4" secondAttribute="centerY" id="izt-LV-cf9"/>
+                                    <constraint firstItem="EWS-Li-mw2" firstAttribute="centerY" secondItem="4sb-4c-eoq" secondAttribute="centerY" id="kgO-lB-SeG"/>
+                                    <constraint firstAttribute="trailing" secondItem="a3l-fh-PcY" secondAttribute="trailing" constant="5" id="lts-Dp-CQC"/>
+                                    <constraint firstItem="EWS-Li-mw2" firstAttribute="centerX" secondItem="4sb-4c-eoq" secondAttribute="centerX" id="pa8-4A-yj4"/>
+                                    <constraint firstAttribute="bottom" secondItem="afb-DE-Bmv" secondAttribute="bottom" id="uuw-HX-BAd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j8t-qv-lqX" firstAttribute="trailing" secondItem="UTk-ub-bQ4" secondAttribute="trailing" id="X2a-WO-VPk"/>
+                            <constraint firstItem="j8t-qv-lqX" firstAttribute="bottom" secondItem="UTk-ub-bQ4" secondAttribute="bottom" id="hDu-V0-KR2"/>
+                            <constraint firstItem="UTk-ub-bQ4" firstAttribute="leading" secondItem="j8t-qv-lqX" secondAttribute="leading" id="pQ7-Bt-M6d"/>
+                            <constraint firstItem="UTk-ub-bQ4" firstAttribute="top" secondItem="j8t-qv-lqX" secondAttribute="top" id="zFs-ZS-021"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j8t-qv-lqX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qF0-NV-Dqd"/>
+                    <connections>
+                        <outlet property="loader" destination="4sb-4c-eoq" id="oU8-Nl-r4q"/>
+                        <outlet property="noDataLabel" destination="EWS-Li-mw2" id="taN-uh-y6f"/>
+                        <outlet property="subRedditsTableView" destination="afb-DE-Bmv" id="a2j-7g-2e3"/>
+                        <segue destination="4SV-Hb-Bl2" kind="presentation" identifier="subredditPostsIdentifier" modalPresentationStyle="overCurrentContext" id="2QK-eN-Hen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19i-nF-nGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="107.8125"/>
+        </scene>
+        <!--SubredditPosts-->
+        <scene sceneID="Tp2-tU-uHU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SubredditPosts" id="4SV-Hb-Bl2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhg-LS-cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550.7246376811595" y="-99.107142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sMJ-fe-Ahw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FZQ-Gk-XxB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1c-Tb-NwI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b15-SP-wbU" kind="relationship" relationship="rootViewController" id="B8Y-1l-jRq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdV-HB-uWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.rectangle.fill" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
